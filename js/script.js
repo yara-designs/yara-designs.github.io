@@ -79,3 +79,35 @@ window.addEventListener('scroll', () => {
         circle.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
+// Scroll reveal for experience cards
+const experienceCards = document.querySelectorAll('.experience-card');
+
+const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    experienceCards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < triggerBottom) {
+            card.classList.add('show');
+        }
+    });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+// Timeline animation
+const timeline = document.querySelector('.timeline-line');
+
+const animateTimeline = () => {
+    const section = document.getElementById('experience');
+    const sectionTop = section.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight * 0.7;
+
+    if (sectionTop < triggerPoint) {
+        timeline.classList.add('active');
+    }
+};
+
+window.addEventListener('scroll', animateTimeline);
+animateTimeline();
