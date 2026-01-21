@@ -2210,3 +2210,6 @@ p,
         grid-template-columns: 1fr;
     }
 }
+#skills {
+    outline: 3px solid red;
+}
