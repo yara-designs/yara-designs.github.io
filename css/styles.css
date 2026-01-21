@@ -2288,11 +2288,4 @@ p,
         grid-template-columns: 1fr;
     }
 }
-/* Remove unwanted borders/outlines globally */
-*,
-*::before,
-*::after {
-    outline: none !important;
-    border: none !important;
-}
 
