@@ -2210,9 +2210,6 @@ p,
         grid-template-columns: 1fr;
     }
 }
-#skills {
-    outline: 3px solid red;
-}
 /* ===============================
    SKILLS – FINAL FIX
 ================================ */
@@ -2291,3 +2288,4 @@ p,
         grid-template-columns: 1fr;
     }
 }
+
