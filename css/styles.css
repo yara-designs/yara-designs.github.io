@@ -2674,5 +2674,78 @@ p,
         grid-template-columns: 1fr;
     }
 }
+/* ===== HERO 3D SHAPES ===== */
 
+.hero {
+    position: relative;
+    overflow: hidden;
+}
 
+/* Container for 3D shapes */
+.hero-3d {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Base shape style */
+.hero-3d .shape {
+    position: absolute;
+    width: 280px;
+    opacity: 0.85;
+    filter: drop-shadow(0 40px 80px rgba(143,124,255,0.35));
+    animation: float3d 14s ease-in-out infinite;
+}
+
+/* Individual positions */
+.hero-3d .ring {
+    top: 10%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.hero-3d .sphere {
+    bottom: 12%;
+    right: 10%;
+    animation-delay: 4s;
+}
+
+.hero-3d .torus {
+    top: 35%;
+    right: 22%;
+    width: 220px;
+    animation-delay: 7s;
+}
+
+/* Floating animation */
+@keyframes float3d {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-25px) rotate(8deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Hero content above shapes */
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* Dark soft overlay */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0.75)
+    );
+    z-index: 2;
+}
