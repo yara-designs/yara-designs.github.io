@@ -3066,26 +3066,18 @@ section:hover .section-title::after {
 }
 .hero-avatar {
     position: relative;
-}
 
-.hero-avatar::after {
-    content: "";
-    position: absolute;
-    inset: -6px;
+    width: 96px;
+    height: 96px;
+
+    margin: 0 auto 28px auto;   /* centering قاطع */
+
+    display: block;             /* مهم */
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(199,125,255,0.4),
-        transparent 70%
-    );
-    z-index: -1;
-}
-.hero-content {
-    position: relative;
-    z-index: 2;
+    padding: 3px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;   /* 👈 ده المهم */
-    text-align: center;
+    background: linear-gradient(135deg, #7b6cff, #c77dff);
+    box-shadow: 0 0 35px rgba(123,108,255,0.6);
+
+    animation: avatarFloat 6s ease-in-out infinite;
 }
